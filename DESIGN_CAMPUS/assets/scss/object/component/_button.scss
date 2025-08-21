@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+
+.c-button {
+    &__item {
+        display: inline-block;
+        font-size: 1.6em;
+        font-weight: bold;
+        padding: 16px 20px;
+        background-color: $button-color-primary;
+        color: $base-color-secondary;
+        box-shadow: 0 4px 4px $button-color-shadow;
+        transition: all 0.4s ease;
+
+        &:active {
+            box-shadow: none;
+            transform: translateY(4px);
+        }
+
+        &--icon {
+            width: 20px;
+            height: 16px;
+            margin-right: 8px;
+        }
+    }
+}
+
+.c-pageTop__button {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: $base-color-primary;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid $base-color-primary;
+    position: fixed;
+    right: 36px;
+    bottom: 36px;
+    z-index: 2;
+    cursor: pointer;
+
+    @include media(md) {
+        right: 8px;
+        bottom: 8px;
+    }
+
+    &::after {
+        content: "▲";
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

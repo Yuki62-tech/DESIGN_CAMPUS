@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use "../foundation/variables" as *;
+
+/* ------------------------------------
+footer
+-------------------------------------*/
+.l-footer {
+    height: 88px;
+    background-color: $base-color-primary;
+}

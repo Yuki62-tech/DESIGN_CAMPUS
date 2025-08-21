@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as *;
+
+.c-desc__list {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-row-gap: 10px;
+
+    &--term {
+        font-size: 1.6em;
+        font-weight: $font-weight-medium;
+        height: 24px;
+        margin-right: 10px;
+        background-color: $base-color-primary;
+        color: $base-color-secondary;
+    }
+
+    &--data {
+        font-size: 1.6em;
+    }
+}
+
+.c-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $base-color-primary;
+    position: relative;
+}
+
+.c-icon--a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid $base-color-primary;
+    background-color: $base-color-secondary;
+    position: relative;
+}

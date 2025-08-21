@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as *;
+
+.c-title__wrapper {
+    text-align: center;
+
+    .c-title {
+        font-size: 2.4em;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: $base-color-primary;
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--sub {
+            font-size: 1.6em;
+        }
+
+        &--contact {
+            font-size: 2.4em;
+            font-weight: bold;
+            color: $base-color-primary;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@use "../../foundation/mixin" as *;
+
+.u-display__grid {
+    display: grid;
+    place-content: center;
+}
+
+.u-lineBreak--md::before {
+    @include media(md) {
+        content: "\A";
+        white-space: pre;
+        line-height: 1.6;
+    }
+}
+
+.u-lineBreak--sm::before {
+    @include media(sm) {
+        content: "\A";
+        white-space: pre;
+        line-height: 1.6;
+    }
+}

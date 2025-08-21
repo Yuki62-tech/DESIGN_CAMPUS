@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@use "./mixin" as *;
+@use "./variables" as *;
+
+/*
+burger
+*/
+.p-burger__menu {
+    display: none;
+
+    @include media(lg) {
+        background-image: url(../images/burger.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.p-burger__menu.active {
+    background-image: url(../images/close.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.p-header__right.active {
+    position: fixed;
+    right: 0;
+    top: 20vh;
+}
+
+
+/*
+js アニメーション
+*/
+.p-question__q.closed::after {
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+.p-question__q.closed+.p-question__a {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.p-question__q.closed {
+    transition: 0.3s;
+    opacity: 1;
+}

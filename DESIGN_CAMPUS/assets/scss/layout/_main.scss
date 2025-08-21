@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-container {
+    max-width: 1040px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* ------------------------------------
+keyVisual
+-------------------------------------*/
+.l-keyVisual {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/KV.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    .l-container {
+        position: relative;
+    }
+}
+
+/* ------------------------------------
+text
+-------------------------------------*/
+.l-text {
+    padding: 0 4%;
+    height: 186px;
+    text-align: center;
+}
+
+/* ------------------------------------
+wonder
+-------------------------------------*/
+.l-wonder {
+    background-color: #E3FAFF;
+    padding: 56px 200px;
+
+    @include media(xl) {
+        padding: 56px 4%;
+    }
+}
+
+/* ------------------------------------
+answer
+-------------------------------------*/
+.l-answer {
+    height: 128px;
+    background-color: $base-color-primary;
+    padding: 0 4%;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        margin-left: -20px;
+        border: 20px solid transparent;
+        border-top: 20px solid #E3FAFF;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ------------------------------------
+feature
+-------------------------------------*/
+.l-feature {
+    padding: 88px 0 76px;
+
+    @include media(xl) {
+        padding: 88px 4% 76px;
+    }
+}
+
+/* ------------------------------------
+cta
+-------------------------------------*/
+.l-cta {
+    background-image: url(../images/CTA.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 68px 4%;
+    text-align: center;
+}
+
+/* ------------------------------------
+lesson
+-------------------------------------*/
+.l-lesson {
+    padding-top: 88px;
+
+    @include media(xl) {
+        padding: 88px 4% 0;
+    }
+}
+
+/* ------------------------------------
+place
+-------------------------------------*/
+.l-place {
+    padding: 96px 0;
+
+    @include media(xl) {
+        padding: 80px 4%;
+    }
+}
+
+/* ------------------------------------
+question
+-------------------------------------*/
+.l-question {
+    background-color: #F5F5F5;
+    padding: 88px 104px;
+
+    @include media(xl) {
+        padding: 88px 4%;
+    }
+}
+
+/* ------------------------------------
+contact
+-------------------------------------*/
+.l-contact {
+    margin: 180px auto 96px;
+    max-width: 480px;
+
+    @include media(sm) {
+        padding: 0 4%;
+    }
+}

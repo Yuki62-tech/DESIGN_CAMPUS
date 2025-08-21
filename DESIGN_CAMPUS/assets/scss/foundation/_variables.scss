@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*
+font
+*/
+$font-weight-medium: 600;
+
+/*
+color
+*/
+$base-color-primary: #0FABB5;
+$base-color-secondary: #fff;
+$text-color: #333;
+$button-color-primary: #F13C68;
+$button-color-shadow: #9b4848;
+
+/*
+mediaQuery
+*/
+$breakpoints: (
+    'sm': 'screen and (max-width: 576px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 992px)',
+    'xl': 'screen and (max-width: 1200px)',
+    ) !default;

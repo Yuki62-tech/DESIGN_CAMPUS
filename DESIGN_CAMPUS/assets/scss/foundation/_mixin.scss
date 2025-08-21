@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "variables" as *;
+
+/*
+mediaQuery
+*/
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

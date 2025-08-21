@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DESIGN_CAMPSは1Day クリエイティブセミナーを主催しているクリエイティブ集団です。" />
+    <title>DESIGN_CAMPUS</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="l-header">
+        <div class="l-inner">
+            <h1 class="p-header__left">
+                <a class="p-header__left--item" href="./index.html">
+                    <img src="./assets/images/Logo.svg" alt="Logo">
+                </a>
+            </h1>
+            <div class="p-burger">
+                <div id="js-burger" class="p-burger__menu"></div>
+                <nav id="js-nav" class="p-header__right">
+                    <ul class="p-list">
+                        <li class="p-list__item">
+                            <a class="p-list__item--link" href="#feature">
+                                本講座の特徴
+                            </a>
+                        </li>
+                        <li class="p-list__item">
+                            <a class="p-list__item--link" href="#lesson">
+                                講座一覧
+                            </a>
+                        </li>
+                        <li class="p-list__item">
+                            <a class="p-list__item--link" href="#question">
+                                よくあるご質問
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="c-button">
+                        <a class="c-button__item" href="#">お申し込みはこちら</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <main>
+        <!-- contact -->
+        <section class="l-contact u-display__grid">
+            <div class="c-title__wrapper">
+                <h2 class="c-title--contact">1day講座申し込みフォーム</h2>
+            </div>
+            <form class="p-form">
+                <table class="p-table">
+                    <tr class="p-table__row">
+                        <th class="p-table__head">
+                            <label for="name" class="p-form__label">名前</label>
+                            <span class="p-form__label--require">必須</span>
+                        </th>
+                        <td class="p-table__body">
+                            <input id="name" class="p-form__input" type="text" placeholder="お名前を入力してください。">
+                        </td>
+                    </tr>
+                    <tr class="p-table__row">
+                        <th class="p-table__head">
+                            <label for="email" class="p-form__label">メールアドレス</label>
+                            <span class="p-form__label--require">必須</span>
+                        </th>
+                        <td class="p-table__body">
+                            <input id="email" class="p-form__input" type="email" placeholder="メールアドレスを入力してください。">
+                        </td>
+                    </tr>
+                    <tr class="p-table__row">
+                        <th class="p-table__head">
+                            <label for="tel" class="p-form__label">電話番号</label>
+                        </th>
+                        <td class="p-table__body">
+                            <input id="tel" class="p-form__input" type="tel" placeholder="電話番号を入力してください。">
+                        </td>
+                    </tr>
+                    <tr class="p-table__row">
+                        <th class="p-table__head">
+                            <label class="p-form__label">参加希望</label>
+                            <span class="p-form__label--require">必須</span>
+                        </th>
+                        <td class="p-table__body">
+                            <input type="radio" id="radio1" name="radio" class="p-form__radio" value="12/10(日)">
+                            <label for="radio1" class="p-form__radio--text">12/10(日)<br>
+                                2時間でかんたんに名刺デザインを作成してみよう！
+                            </label>
+                            <input type="radio" id="radio2" name="radio" class="p-form__radio" value="12/17(日)">
+                            <label for="radio2" class="p-form__radio--text">
+                                12/17(日)<br>
+                                集客のためのWeb活用術〜SEOとユーザビリティのお話〜
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+                <div class="p-form__wrapper">
+                    <input type="checkbox" id="privacy" name="privacy">
+                    <label for="privacy" class="p-form__wrapper--privacy">
+                        プライバシーポリシーに同意する
+                    </label>
+                    <div class="c-button">
+                        <a href="./thanks.html" class="c-button__item p-form__button">
+                            送信
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- /contact -->
+    </main>
+
+    <!-- footer -->
+    <footer class="l-footer u-display__grid">
+        <p class="p-footer">
+            <small class="p-footer__copyRight">
+                Copyright 2025
+                <span class="u-lineBreak--sm"></span>
+                DESIGN CAMPUS
+            </small>
+        </p>
+    </footer>
+    <!-- /footer -->
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

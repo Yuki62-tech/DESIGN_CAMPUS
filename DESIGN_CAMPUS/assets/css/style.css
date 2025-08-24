@@ -488,26 +488,12 @@ burger
 }
 
 /*
-js アニメーション
+アコーディオン
 */
-.p-question__q.closed::after {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.p-question__q.closed + .p-question__a {
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.4s;
-  transition: height 0.4s;
-}
-
-.p-question__q.closed {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 1;
+.p-accordion__title.open::after {
+  top: 45%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .l-header {
@@ -1256,86 +1242,84 @@ place
 /* ------------------------------------
 question
 -------------------------------------*/
-.p-question {
-  margin-top: 46px;
+.p-accordion__wrapper {
+  margin-top: 72px;
 }
-.p-question--item {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid #878787;
+.p-accordion__wrapper--item {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #878787;
 }
-.p-question--item:last-child {
-  margin-bottom: 0;
-}
-.p-question--item .p-question__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-.p-question--item .p-question__content--text {
+
+.p-accordion__title {
   font-size: 1.6em;
-  line-height: 1.7;
-  margin: 0 40px;
-}
-@media screen and (max-width: 768px) {
-  .p-question--item .p-question__content--text {
-    margin: 0 20px;
-    width: 60%;
-    line-height: 1.4;
-  }
-}
-.p-question--item .p-question__q {
-  width: 100%;
+  padding: 16px 32px 16px 80px;
+  cursor: pointer;
   position: relative;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
 }
-.p-question--item .p-question__q::after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-left: 4px solid #0FABB5;
-  border-top: 4px solid #0FABB5;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-.p-question--item .p-question__q--icon::before {
+.p-accordion__title::before {
   content: "Q";
-  display: block;
+  display: grid;
+  place-content: center;
+  width: 60px;
+  height: 60px;
   font-size: 36px;
   line-height: 1.7;
   color: #fff;
+  background: #0FABB5;
+  border-radius: 50%;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
-.p-question--item .p-question__a {
-  overflow: hidden;
-  -webkit-transition: height 0.7s;
-  transition: height 0.7s;
-  margin-top: 16px;
-}
-.p-question--item .p-question__a--icon::before {
-  content: "A";
+.p-accordion__title::after {
+  content: "";
   display: block;
+  width: 16px;
+  height: 16px;
+  border-top: solid 2px #0FABB5;
+  border-right: solid 2px #0FABB5;
+  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.p-accordion__content {
+  display: none;
+  padding: 16px 32px 16px 80px;
+  margin-top: 16px;
+  position: relative;
+}
+.p-accordion__content::before {
+  content: "A";
+  display: grid;
+  place-content: center;
+  width: 60px;
+  height: 60px;
   font-size: 36px;
   line-height: 1.7;
   color: #0FABB5;
+  background: #fff;
+  border: 2px solid #0FABB5;
+  border-radius: 50%;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.p-accordion__text {
+  font-size: 1.6em;
+  line-height: 1.6;
 }
 
 /* ------------------------------------

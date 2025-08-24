@@ -35,20 +35,9 @@ burger
 
 
 /*
-js アニメーション
+アコーディオン
 */
-.p-question__q.closed::after {
-    transform: rotate(-135deg);
-    transition: 0.3s;
-}
-
-.p-question__q.closed+.p-question__a {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.4s;
-}
-
-.p-question__q.closed {
-    transition: 0.3s;
-    opacity: 1;
+.p-accordion__title.open::after {
+    top: 45%;
+    transform: rotate(-45deg);
 }

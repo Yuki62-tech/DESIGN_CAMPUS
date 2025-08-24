@@ -12,22 +12,12 @@ burger.addEventListener('click', function () {
 });
 
 // アコーディオン
-const questions = document.querySelectorAll('.p-question__q');
-
-questions.forEach((question) => {
-    const answer = question.nextElementSibling;
-    const answerHeight = answer?.clientHeight || 0;
-
-    // 初期状態は閉じる
-    question.classList.add('closed');
-
-    question.addEventListener('click', () => {
-        const isOpen = answer?.style.height;
-        if (isOpen) {
-            answer.style.height = ''; // 閉じる
-        } else {
-            answer.style.height = `${answerHeight}px`; // 開く
-        }
-        question.classList.toggle('closed');
-    });
+$(function () {
+  // タイトルをクリックすると
+  $(".js-accordion-title").on("click", function () {
+    // クリックした次の要素を開閉
+    $(this).next().slideToggle(300);
+    // タイトルにopenクラスを付け外しして矢印の向きを変更
+    $(this).toggleClass("open", 300);
+  });
 });

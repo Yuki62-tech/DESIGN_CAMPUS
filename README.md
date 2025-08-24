@@ -5,7 +5,7 @@
 HTML、CSS、JavaScript を使用してシンプルで美しいデザインを実現しています。
 
 ## デモ
-- サイトURL（Netlify等にデプロイしている場合）: https://animated-pudding-826c50.netlify.app/
+- サイトURL:　https://kaleidoscopic-donut-166809.netlify.app/
 
 ## 使用技術
 - HTML5
